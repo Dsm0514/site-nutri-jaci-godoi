@@ -1,0 +1,183 @@
+/* =========================================================
+   Jaciara Godoi — Relatório de decisões de UX/UI
+   ========================================================= */
+:root {
+  --ink: #201820;
+  --ink-soft: #4a3f4a;
+  --muted: #6b5b6b;
+  --paper: #ffffff;
+  --tint: #FBF6FB;
+  --border: #EBDDEB;
+  --accent: #9A0161;
+  --accent-soft: #A668A6;
+  --accent-pale: #C8A2C8;
+  --code-bg: #f4eef4;
+  --shadow: 0 12px 32px rgba(154, 1, 97, 0.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2e9f2;
+    --ink-soft: #d8c9d8;
+    --muted: #a996a9;
+    --paper: #1c1420;
+    --tint: #241a29;
+    --border: #3a2b3e;
+    --accent: #f14e9c;
+    --accent-soft: #c98bd6;
+    --accent-pale: #e3c6ea;
+    --code-bg: #2a1f2f;
+    --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.88em;
+  background: var(--code-bg);
+  padding: 0.12em 0.4em;
+  border-radius: 4px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0.9;
+}
+.back-link:hover { opacity: 1; }
+
+.wrap { max-width: 880px; margin-inline: auto; padding: 0 1.5rem 6rem; }
+
+/* ---------- Cabeçalho ---------- */
+.cover {
+  background: linear-gradient(155deg, var(--accent) 0%, var(--accent-soft) 55%, var(--accent-pale) 100%);
+  color: #fff;
+  padding: 3rem 1.5rem 3.5rem;
+}
+.cover-inner { max-width: 880px; margin-inline: auto; }
+.cover .eyebrow {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  opacity: 0.88; margin: 1.5rem 0 0.9rem;
+}
+.cover h1 { color: #fff; font-size: clamp(2rem, 4vw + 1rem, 3rem); margin: 0 0 1rem; }
+.cover p { max-width: 56ch; opacity: 0.94; margin: 0; font-size: 1.05rem; }
+.cover .meta {
+  display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin-top: 2rem;
+  font-size: 0.85rem; opacity: 0.85;
+}
+
+/* ---------- Navegação de âncoras ---------- */
+.toc {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin: 2.2rem 0 0;
+  padding: 1.1rem 1.3rem;
+  background: var(--tint);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.toc a {
+  font-size: 0.85rem; font-weight: 600; color: var(--ink-soft);
+  padding: 0.4rem 0.8rem; border-radius: 999px; background: var(--paper);
+  border: 1px solid var(--border);
+}
+.toc a:hover { color: var(--accent); border-color: var(--accent-pale); }
+
+section { margin-top: 4rem; scroll-margin-top: 1.5rem; }
+section > .kicker {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 0.5rem;
+}
+section > h2 { font-size: 1.7rem; margin: 0 0 1.2rem; }
+section > h3 { font-size: 1.15rem; margin: 1.8rem 0 0.6rem; }
+p { color: var(--ink-soft); margin: 0 0 1rem; max-width: 70ch; }
+ul, ol { color: var(--ink-soft); padding-left: 1.3rem; margin: 0 0 1.2rem; }
+li { margin-bottom: 0.45rem; max-width: 66ch; }
+strong { color: var(--ink); }
+
+/* ---------- Paleta ---------- */
+.swatches {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem; margin: 1.5rem 0 2rem;
+}
+.swatch { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--paper); }
+.swatch-color { height: 92px; }
+.swatch-color--accent { background: #9A0161; }
+.swatch-color--accent-soft { background: #A668A6; }
+.swatch-color--accent-pale { background: #C8A2C8; }
+.swatch-color--ink { background: #201820; }
+.swatch-body { padding: 0.9rem 1rem; }
+.swatch-name { font-weight: 700; font-size: 0.95rem; margin: 0 0 0.15rem; }
+.swatch-hex { font-family: ui-monospace, monospace; font-size: 0.82rem; color: var(--muted); margin: 0 0 0.5rem; }
+.swatch-use { font-size: 0.82rem; color: var(--ink-soft); margin: 0; }
+.contrast-note { font-size: 0.76rem; color: var(--muted); margin-top: 0.5rem; }
+
+/* ---------- Especimes de tipografia ---------- */
+.type-card {
+  border: 1px solid var(--border); border-radius: 14px; padding: 1.6rem 1.8rem;
+  margin-bottom: 1.2rem; background: var(--tint);
+}
+.type-card .label { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 0.6rem; }
+.type-display { font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif; font-size: 2.1rem; margin: 0 0 0.3rem; }
+.type-body { font-size: 1.05rem; color: var(--ink-soft); margin: 0; }
+.type-body--sans { font-family: -apple-system, "Segoe UI", sans-serif; }
+.type-meta { font-size: 0.82rem; color: var(--muted); margin-top: 0.7rem; }
+
+/* ---------- Tabela ---------- */
+.table-wrap { overflow-x: auto; margin: 1.2rem 0 1.8rem; border: 1px solid var(--border); border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 520px; }
+th, td { text-align: left; padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { background: var(--tint); font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: none; }
+td strong { white-space: nowrap; }
+
+/* ---------- Cards de decisão ---------- */
+.decision {
+  border-left: 3px solid var(--accent-soft);
+  background: var(--tint);
+  border-radius: 0 12px 12px 0;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1rem;
+}
+.decision .why { font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; font-size: 0.95rem; }
+.decision p { margin: 0; font-size: 0.92rem; }
+
+.callout {
+  background: var(--tint); border: 1px solid var(--border); border-radius: 14px;
+  padding: 1.3rem 1.5rem; margin: 1.5rem 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+footer.report-footer {
+  margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+  font-size: 0.8rem; color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .cover { padding: 2.5rem 1.2rem 2.6rem; }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="heroTitle">
+<title id="heroTitle">Retrato profissional de nutricionista (imagem de substituição)</title>
+<defs>
+<linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#9A0161"/>
+<stop offset="55%" stop-color="#A668A6"/>
+<stop offset="100%" stop-color="#C8A2C8"/>
+</linearGradient>
+<radialGradient id="g2" cx="50%" cy="30%" r="70%">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+</defs>
+<rect width="900" height="1100" fill="url(#g1)"/>
+<rect width="900" height="1100" fill="url(#g2)"/>
+<g opacity="0.16" stroke="#ffffff" stroke-width="2" fill="none">
+<circle cx="450" cy="430" r="230"/>
+<circle cx="450" cy="430" r="300"/>
+</g>
+<g transform="translate(450,430)" fill="#ffffff" opacity="0.92">
+<path d="M-70,-40 a70,70 0 1,1 0.1,0 z" fill="none" stroke="#ffffff" stroke-width="6"/>
+<path d="M0,-92 C40,-92 70,-62 70,-22 C70,18 40,48 0,48 C-40,48 -70,18 -70,-22 C-70,-62 -40,-92 0,-92 Z" fill="none" stroke="#ffffff" stroke-width="6"/>
+<path d="M-90,80 C-90,20 -50,-10 0,-10 C50,-10 90,20 90,80" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+</g>
+<text x="450" y="640" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" fill="#ffffff" opacity="0.85" letter-spacing="2">JACIARA GODOI</text>
+<text x="450" y="678" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" opacity="0.65" letter-spacing="3">FOTO PROFISSIONAL AQUI</text>
+</svg>
