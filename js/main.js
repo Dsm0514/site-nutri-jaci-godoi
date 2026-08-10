@@ -120,6 +120,80 @@
   });
 
   /* ---------------------------------------------------------
+   * Abertura suave dos accordions (Dúvidas frequentes)
+   *
+   * O <details> nativo abre/fecha instantaneamente — animamos a
+   * altura via Web Animations API. A altura fechada é medida no
+   * carregamento (todos começam fechados no HTML) e a altura aberta
+   * é lida do scrollHeight logo após abrir, então não precisamos
+   * somar padding/margens manualmente.
+   * --------------------------------------------------------- */
+  if (!prefersReducedMotion) {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const summary = item.querySelector("summary");
+      const closedHeight = item.offsetHeight;
+      let animation = null;
+      let isClosing = false;
+      let isExpanding = false;
+
+      const onFinish = (open) => {
+        item.open = open;
+        animation = null;
+        isClosing = false;
+        isExpanding = false;
+        item.style.height = "";
+        item.style.overflow = "";
+      };
+
+      const shrink = () => {
+        isClosing = true;
+        item.style.overflow = "hidden";
+        if (animation) animation.cancel();
+        animation = item.animate(
+          { height: [`${item.offsetHeight}px`, `${closedHeight}px`] },
+          { duration: 250, easing: "ease" }
+        );
+        animation.onfinish = () => onFinish(false);
+        animation.oncancel = () => { isClosing = false; };
+      };
+
+      const expand = () => {
+        isExpanding = true;
+        item.style.overflow = "hidden";
+        const startHeight = `${item.offsetHeight}px`;
+        const endHeight = `${item.scrollHeight}px`;
+        if (animation) animation.cancel();
+        animation = item.animate(
+          { height: [startHeight, endHeight] },
+          { duration: 300, easing: "ease" }
+        );
+        animation.onfinish = () => onFinish(true);
+        animation.oncancel = () => { isExpanding = false; };
+      };
+
+      const open = () => {
+        item.style.height = `${item.offsetHeight}px`;
+        item.open = true;
+        window.requestAnimationFrame(expand);
+      };
+
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (isClosing || !item.open) {
+          faqItems.forEach((other) => {
+            if (other !== item && other.open) other.querySelector("summary").click();
+          });
+          open();
+        } else if (isExpanding || item.open) {
+          shrink();
+        }
+      });
+    });
+  }
+
+  /* ---------------------------------------------------------
    * Copiar telefone para a área de transferência
    * --------------------------------------------------------- */
   const copyButtons = document.querySelectorAll(".copy-btn");
