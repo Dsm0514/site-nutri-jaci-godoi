@@ -275,25 +275,12 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   flex-shrink: 0;
 }
-.logo-text {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: var(--color-ink);
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-.logo-text strong { color: var(--color-primary); }
-.logo-text small {
-  font-family: var(--font-body);
-  font-size: 0.62rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #6b5b6b;
+.logo-full {
+  height: 38px;
+  width: auto;
+  display: block;
 }
 
 .primary-nav ul {
@@ -793,18 +780,9 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: #fff;
 }
-.footer-brand small {
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #b9a8b9;
+.footer-brand .logo-full {
+  height: 30px;
 }
 .footer-nav {
   display: flex;

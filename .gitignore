@@ -1,2 +1,5 @@
 # Relatório pessoal de decisões (uso interno, não faz parte do site)
 site-jaci-godoi-relatorio.html
+
+# Segredos locais (chaves de API etc.) — nunca deve ir para o GitHub
+.env
