@@ -566,9 +566,7 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
   padding: 2.2rem 1.9rem;
   box-shadow: var(--shadow-sm);
   position: relative;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
-.price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .price-card--featured {
   background: linear-gradient(160deg, #fff 0%, #fdf3fa 100%);
   border-color: var(--color-primary);
@@ -649,6 +647,7 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
    ========================================================= */
 .faq-list {
   max-width: 760px;
+  margin-top: 2.5rem;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -814,6 +813,12 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
   color: #9a8a9a;
   margin-left: auto;
 }
+.footer-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-credit a:hover { color: #e7dee7; }
 
 /* =========================================================
    Botões flutuantes (voltar ao topo + WhatsApp)
@@ -935,4 +940,19 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
   .hero-actions .btn { justify-content: center; }
   .whatsapp-fab { width: 52px; height: 52px; right: 1rem; bottom: 1rem; }
   .scrolltop-fab { width: 52px; height: 52px; right: 1rem; bottom: calc(1rem + 52px + 0.6rem); }
+
+  .tab-list {
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+    padding: 0.3rem;
+  }
+  .tab-btn {
+    flex: 1 1 0;
+    padding: 0.55rem 0.35rem;
+    font-size: 0.78rem;
+    line-height: 1.25;
+    white-space: normal;
+    text-align: center;
+  }
 }
