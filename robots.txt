@@ -38,4 +38,4 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-Sitemap: https://www.nutrijaciaragodoi.com.br/sitemap.xml
+Sitemap: https://www.nutrijacigodoi.com.br/sitemap.xml
