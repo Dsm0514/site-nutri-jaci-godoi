@@ -151,6 +151,35 @@
       <path d="M6 10.5V16c0 1.66 2.69 3 6 3s6-1.34 6-3v-5.5"/>
       <line x1="22" y1="8" x2="22" y2="13.5"/>
     </symbol>
+    <symbol id="icon-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 4H6.5A1.5 1.5 0 0 0 5 5.5v14A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-14A1.5 1.5 0 0 0 17.5 4H15"/>
+      <rect x="9" y="2.5" width="6" height="3.5" rx="1"/>
+      <path d="m8.5 13 2.3 2.3L15.5 10.5"/>
+    </symbol>
+    <symbol id="icon-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="6" width="13" height="12" rx="2.5"/>
+      <path d="m15.5 10.5 6-3.5v10l-6-3.5"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="5" width="17" height="15.5" rx="2.2"/>
+      <line x1="3.5" y1="10" x2="20.5" y2="10"/>
+      <line x1="8" y1="3" x2="8" y2="7"/>
+      <line x1="16" y1="3" x2="16" y2="7"/>
+      <path d="M9 15.5c.4-1.4 1.3-2 3-2 1.7 0 2.6.6 3 2-.4 1.4-1.3 2-3 2-1.7 0-2.6-.6-3-2Z"/>
+    </symbol>
+    <symbol id="icon-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="12" x2="16" y2="12"/>
+      <rect x="4.5" y="7" width="3.5" height="10" rx="1"/>
+      <rect x="16" y="7" width="3.5" height="10" rx="1"/>
+      <line x1="2.5" y1="10" x2="2.5" y2="14"/>
+      <line x1="21.5" y1="10" x2="21.5" y2="14"/>
+    </symbol>
+    <symbol id="icon-phone-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="2" width="12" height="20" rx="2.2"/>
+      <rect x="9" y="8" width="4.5" height="5" rx="1.2"/>
+      <path d="m13.5 9.8 1.8-1v4.4l-1.8-1"/>
+      <line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/>
+    </symbol>
     <symbol id="icon-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="12" y1="19" x2="12" y2="5"/>
       <path d="m6 11 6-6 6 6"/>
@@ -172,6 +201,7 @@
           <li><a href="#sobre">Quem sou eu</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
           <li><a href="#servicos">Serviços e planos</a></li>
+          <li><a href="#nutri-personal">Nutri + Personal</a></li>
           <li><a href="#faq">Dúvidas</a></li>
           <li><a href="#contato" class="nav-cta">Contato</a></li>
         </ul>
@@ -204,6 +234,14 @@
           </ul>
         </div>
 
+        <ul class="hero-badges" aria-label="Áreas de atuação">
+          <li><span aria-hidden="true">✨</span> Saúde da mulher</li>
+          <li><span aria-hidden="true">⚖️</span> Emagrecimento e transformação</li>
+          <li><span aria-hidden="true">💉</span> Acompanhamento nutricional para quem utiliza canetas para emagrecer</li>
+          <li><span aria-hidden="true">🦠</span> Modulação intestinal</li>
+          <li><span aria-hidden="true">🥗</span> Nutrição clínica</li>
+          <li><span aria-hidden="true">💪</span> Nutrição esportiva</li>
+        </ul>
       </div>
       <div class="hero-media" aria-hidden="true">
         <picture>
@@ -217,7 +255,7 @@
     <section id="sobre" class="section about">
       <div class="container about-grid">
         <div class="about-media">
-          <img src="assets/img/jaci-about-me.webp" alt="Jaciara Goddoi em seu consultório particular no Centro de Sapucaia do Sul" width="600" height="800" loading="lazy" decoding="async">
+          <img src="assets/img/jaci-about-me.webp" srcset="assets/img/jaci-about-me-480.webp 480w, assets/img/jaci-about-me.webp 600w" sizes="(max-width: 960px) 420px, 452px" alt="Jaciara Goddoi em seu consultório particular no Centro de Sapucaia do Sul" width="600" height="800" loading="lazy" decoding="async">
         </div>
         <div class="about-copy">
           <p class="eyebrow">Quem sou eu</p>
@@ -442,6 +480,80 @@
               </article>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETO NUTRI + PERSONAL -->
+    <section id="nutri-personal" class="section nutri-personal" aria-labelledby="nutri-personal-title">
+      <div class="container">
+        <p class="eyebrow center">Projeto</p>
+        <h2 class="center" id="nutri-personal-title">Nutri + Personal</h2>
+        <p class="np-tagline">Sua evolução com acompanhamento de verdade!</p>
+
+        <ul class="np-team" aria-label="Profissionais do projeto">
+          <li><span>Personal Trainer</span> Luciano Machado</li>
+          <li><span>Nutricionista</span> Jaciara Goddoi</li>
+        </ul>
+        <p class="np-motto">Juntos pelo seu objetivo!</p>
+
+        <div class="np-plan">
+          <p class="np-plan-name">Plano Essencial</p>
+          <p class="np-plan-price">R$199,99<span>/mês</span></p>
+          <p class="np-plan-duration">Programa de acompanhamento por 30 dias</p>
+          <p class="np-plan-note">Mais que um programa, é um investimento em você!</p>
+          <p class="np-plan-care">Cuidando da sua saúde, do seu corpo e da sua autoestima!</p>
+        </div>
+
+        <h3 class="np-included-title">O que está incluído:</h3>
+        <ul class="np-included">
+            <li class="np-item">
+              <svg class="np-item-icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-clipboard"></use></svg>
+              <h4>Consulta nutricional online</h4>
+              <p>Avaliação individual e plano alimentar personalizado para sua rotina e seus objetivos.</p>
+            </li>
+            <li class="np-item">
+              <svg class="np-item-icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-video"></use></svg>
+              <h4>Chamada de vídeo com o personal</h4>
+              <p>Entenda seus objetivos, rotina e nível de experiência com os exercícios.</p>
+            </li>
+            <li class="np-item">
+              <svg class="np-item-icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-calendar"></use></svg>
+              <h4>Dieta planejada para 30 dias</h4>
+              <p>Cardápio personalizado, equilibrado e adaptado à sua rotina, preferências e objetivos.</p>
+            </li>
+            <li class="np-item">
+              <svg class="np-item-icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-dumbbell"></use></svg>
+              <h4>Plano de treino para 30 dias</h4>
+              <p>Treinamento personalizado conforme seus objetivos, experiência e equipamentos da sua academia.</p>
+            </li>
+            <li class="np-item">
+              <svg class="np-item-icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>
+              <h4>Suporte pelo WhatsApp</h4>
+              <p>Tire dúvidas, peça orientações e receba acompanhamento durante todo o programa.</p>
+            </li>
+            <li class="np-item">
+              <svg class="np-item-icon" width="28" height="28" aria-hidden="true" focusable="false"><use href="#icon-phone-video"></use></svg>
+              <h4>Correção de execução por vídeo</h4>
+              <p>Envie seus vídeos e o personal analisa sua execução, orientando os ajustes necessários.</p>
+            </li>
+        </ul>
+
+        <ul class="np-benefits" aria-label="Resultados do programa">
+          <li>Emagrecimento saudável</li>
+          <li>Mais disposição</li>
+          <li>Ganho de massa magra</li>
+          <li>Saúde mental</li>
+        </ul>
+
+        <p class="np-closing">Você mais forte, saudável e confiante!</p>
+
+        <div class="np-cta">
+          <a href="https://wa.me/5551989740905?text=Ol%C3%A1%2C%20Jaciara!%20Quero%20garantir%20minha%20vaga%20no%20Projeto%20Nutri%20%2B%20Personal." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Garanta sua vaga no Projeto Nutri + Personal pelo WhatsApp (abre em nova aba)">
+            <svg class="icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"></use></svg>
+            Garanta sua vaga!
+          </a>
+          <p class="np-limited">Vagas limitadas</p>
         </div>
       </div>
     </section>

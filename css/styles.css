@@ -1,5 +1,5 @@
 /* =========================================================
-   Jaciara Godoi — Orientação Nutricional
+   Jaciara Goddoi — Orientação Nutricional
    Fontes: hospedadas localmente (subset latin) em vez do
    <link> do Google Fonts — elimina a viagem extra até
    fonts.googleapis.com/fonts.gstatic.com antes do download
@@ -71,7 +71,7 @@
 }
 
 /* =========================================================
-   Jaciara Godoi — Orientação Nutricional
+   Jaciara Goddoi — Orientação Nutricional
    Design tokens
    ========================================================= */
 :root {
@@ -384,8 +384,8 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
 }
 .hero-credentials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.2rem;
+  flex-direction: column;
+  gap: 0.6rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-border);
 }
@@ -404,6 +404,39 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
   width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--color-secondary);
+}
+/* Badges de áreas de atuação: abaixo do card, alinhadas à sua largura */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 560px;
+  margin-top: 1rem;
+}
+.hero-badges li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.25rem 0.9rem 0.25rem 0.25rem;
+  background: #FCE8F3;
+  border: 1px solid #F2C4DD;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(154, 1, 97, 0.12);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #8A0156;
+}
+.hero-badges li span {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  line-height: 1;
 }
 /* =========================================================
    Sobre
@@ -641,6 +674,143 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
   margin-bottom: 1.8rem;
 }
 .price-card .btn { justify-content: center; width: 100%; margin-bottom: 1.8rem; }
+
+/* =========================================================
+   Projeto Nutri + Personal
+   ========================================================= */
+.nutri-personal {
+  background: linear-gradient(160deg, #1d1020 0%, #2c1236 55%, #3a1446 100%);
+  color: #fff;
+}
+.nutri-personal .eyebrow { color: var(--color-light); }
+.nutri-personal h2 { color: #fff; }
+.np-tagline {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.6vw + 0.7rem, 1.6rem);
+  color: var(--color-light);
+  margin-bottom: 1.8rem;
+}
+.np-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 2rem;
+  margin-bottom: 1rem;
+}
+.np-team li { font-weight: 600; text-align: center; }
+.np-team li span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-light);
+  font-weight: 700;
+}
+.np-motto {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 2.5rem;
+}
+.np-plan {
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  background: linear-gradient(145deg, var(--color-primary) 0%, #6d2b8a 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.np-plan-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.np-plan-price {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-block: 0.3rem;
+}
+.np-plan-price span { font-size: 1.2rem; font-weight: 500; margin-left: 0.15em; }
+.np-plan-duration {
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.np-plan-note { margin-top: 1.4rem; font-weight: 600; }
+.np-plan-care { margin-top: 0.4rem; font-size: 0.95rem; opacity: 0.9; }
+.np-included-title {
+  text-align: center;
+  color: var(--color-light);
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.np-included {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.np-item {
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 162, 200, 0.35);
+  border-radius: var(--radius-md);
+}
+.np-item-icon { display: block; margin: 0 auto 0.9rem; color: var(--color-light); }
+.np-item h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.np-item p { font-size: 0.92rem; color: rgba(255, 255, 255, 0.8); }
+.np-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin-block: 2.5rem 2rem;
+}
+.np-benefits li {
+  padding: 0.5rem 1.1rem;
+  border: 1px solid rgba(200, 162, 200, 0.5);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.np-closing {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2vw + 0.8rem, 1.9rem);
+  color: var(--color-light);
+  margin-bottom: 1.8rem;
+}
+.np-cta { text-align: center; }
+.np-limited {
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
 
 /* =========================================================
    FAQ
@@ -883,6 +1053,15 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
 /* =========================================================
    Responsivo
    ========================================================= */
+@media (max-width: 1100px) {
+  .primary-nav ul { gap: 1.2rem; }
+}
+
+@media (min-width: 961px) and (max-width: 1040px) {
+  .primary-nav ul { gap: 0.9rem; }
+  .primary-nav a { font-size: 0.88rem; }
+}
+
 @media (max-width: 960px) {
   .hero { display: flex; flex-direction: column; min-height: 0; padding-block: 0; }
   .hero-media { position: relative; inset: auto; order: -1; aspect-ratio: 4 / 3; }
@@ -894,17 +1073,15 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
     padding-block: clamp(1.75rem, 6vw, 2.5rem);
     padding-inline: 1.5rem;
   }
+  .hero-badges { max-width: none; margin-top: 0; padding: 0.25rem 1.5rem clamp(1.75rem, 6vw, 2.5rem); }
   .about-grid { grid-template-columns: 1fr; }
   .about-media { max-width: 420px; margin-inline: auto; }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .np-included { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   .contact-media { order: -1; max-width: 380px; margin-inline: auto; }
   .pricing-grid,
   .pricing-grid--duo { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
-}
-
-@media (max-width: 760px) {
-  :root { --header-h: 68px; }
 
   .nav-toggle { display: flex; }
 
@@ -928,9 +1105,14 @@ h2.center { text-align: center; margin-bottom: 0.75rem; }
   .primary-nav.is-open { transform: translateX(0); }
   .primary-nav ul { flex-direction: column; align-items: flex-start; gap: 1.4rem; }
   .primary-nav .nav-cta { width: 100%; text-align: center; }
+}
+
+@media (max-width: 760px) {
+  :root { --header-h: 68px; }
 
   .steps { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
+  .np-included { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {

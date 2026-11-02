@@ -31,6 +31,7 @@
 
   const closeNav = () => {
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Abrir menu de navegação");
     primaryNav.classList.remove("is-open");
   };
 
@@ -38,6 +39,7 @@
     navToggle.addEventListener("click", () => {
       const isOpen = navToggle.getAttribute("aria-expanded") === "true";
       navToggle.setAttribute("aria-expanded", String(!isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Abrir menu de navegação" : "Fechar menu de navegação");
       primaryNav.classList.toggle("is-open", !isOpen);
     });
 
